@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../../../HTML tutorial"
+		},
+		{
+			"path": "../../../../../../../../../../xampp/htdocs/BookManagement"
+		},
+		{
+			"path": "../../../../../../../../../../xampp/htdocs/login"
+		},
+		{
+			"path": "../../../../../../../../../../xampp/htdocs/PHPprograms"
+		},
+		{
+			"path": "../../../../../../../../../../xampp/htdocs/PHPpractice"
+		},
+		{
+			"path": "../../../../../../../../../../xampp/htdocs/Travelscapes"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "HTML tutorial"
+	}
+}

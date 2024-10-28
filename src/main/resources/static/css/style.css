@@ -1,0 +1,360 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+}
+
+
+/******** NAVBAR *********/
+nav {
+	background: black;
+}
+
+.logocontainer {
+	padding-top: 4px;
+	height: 44px;
+}
+
+.logo {
+	position: relative;
+	border-radius: 40px;
+	height: 31px;
+	max-width: 100%;
+}
+
+.logotext {
+	font-weight: 700;
+	top: -34px;
+	left: 32px;
+	margin: 0px;
+	position: relative;
+	color: red;
+}
+
+.sublogotext {
+	left: -83px;
+	top: 15px;
+	font-size: 12px;
+	position: relative;
+	color: white;
+}
+
+/***********HOME PAGE***************/
+.d-block {
+	height: 90vh;
+}
+
+/************REGISTER *****************/
+.row {
+	height: 730px
+}
+
+@media ( min-width : 768px) {
+	.offset-md-3 {
+		margin-left: 20% !important;
+	}
+}
+
+.mycard {
+	box-shadow: 1px 1px 10px white;
+	padding: 3px 10px;
+	background-color: rgb(3, 3, 3, 0.7) !important;
+}
+
+.title {
+	color: red;
+}
+
+.registerpage {
+	background-image: url("../img/registerbackground.png");
+	background-size: cover;
+}
+
+.form-control {
+	background-color: rgb(3, 3, 3, 0.2) !important;
+	width: 96% !important;
+	font-weight: 600 !important;
+	margin-left: 2%;
+	box-shadow: 1px 1px 10px white;
+	color: white !important;
+}
+
+
+input::placeholder {
+	color: rgb(255, 255, 255, 0.7) !important;
+}
+
+.form-group label {
+	color: white;
+	margin-left: 13px;
+	font-weight: 600;
+	border: thin;
+}
+
+.button {
+	margin-bottom: 7px;
+}
+
+.form-check {
+	margin-left: -55% !important;
+}
+
+.terms {
+	position: relative;
+	left: -6%;
+	margin-top: -1%;
+}
+
+/************** LOGIN PAGE *******************/
+.login{
+	background-image: url("../img/loginbackground.jpg");
+    background-size: 100% 100vh;
+    height: 100vh;
+    width: 100%;
+}
+
+.user_card {
+	height: 400px;
+	width: 500px;
+	margin-top: 8%;
+	margin-bottom: auto;
+	background:rgb(3,3,3,0.6);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 10px;
+	box-shadow: 1px 1px 10px black;
+
+	-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+	border-radius: 5px;
+}
+
+.brand_logo_container {
+    position: absolute;
+    height: 164px;
+    width: 166px;
+    top: -75px;
+    border-radius: 50%;
+    background: rgb(232 26 26);
+    padding: 7px;
+    text-align: center;
+}
+
+.brand_logo {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	border: 2px solid white;
+}
+
+.form_container {
+	margin-top: 100px;
+}
+
+.login_btn {
+	width: 100%;
+	background: #c0392b !important;
+	color: white !important;
+}
+
+.login_btn:focus {
+	box-shadow: none !important;
+	outline: 0px !important;
+}
+
+.login_container {
+	padding: 0 2rem;
+}
+
+.input-group-text {
+	background: #c0392b !important;
+	color: white !important;
+	border: 0 !important;
+	border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+.input_user, .input_pass:focus {
+	box-shadow: none !important;
+	outline: 0px !important;
+}
+
+.input-group {
+	    width: 107% !important;
+}
+
+.input-group-append {
+    position: relative;
+    margin-left: -36px !important;
+}
+.custom-checkbox .custom-control-input:checked ~.custom-control-label::before{
+	background-color: #c0392b !important;
+}
+
+.custom-control {
+    left: -20% !important;
+}
+
+.links{
+	color: white;
+}
+
+.links a{
+color:white;	
+}
+.links a:hover{
+	color:white;
+	text-shadow: 1px 1px 5px white;
+}
+
+/********************************** USER **********************************/
+
+/***********SIDEBAR*****************/
+
+@media only screen and (max-width: 600px){       /*the style will get applied only when the max width will be 600px or less*/
+ 	.sidebar{
+		width: 80% !important;
+		background: white;
+		height: 100%;
+		position: fixed;
+		padding-top: 20px;
+		display: none;
+		z-index: 9999;
+   }
+   .content{
+	margin-left: 0% !important;
+}
+}
+
+.bar {
+    text-align: center;
+    align-content: center;
+    color: wheat;
+    height: 58px;
+    position: relative;
+    left: -13px;
+    margin-right: -17px;
+    padding: 0px;
+    width: 45px;
+    cursor: pointer;
+}
+
+.sidebar{
+	width: 18%;
+	background: white;
+	height: 100%;
+	position: fixed;
+	padding-top: 20px;
+}
+
+.crossBtn{
+  position: absolute;
+  top:0;	
+  right: 35px;
+  font-size:30px;
+  cursor:pointer;
+}
+
+.item{
+	margin-top:10px;
+	display: block;
+	width:100%;
+	padding: 10px 29px;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.item:hover{
+		text-decoration: none;
+	background: #e2e2e2;
+}
+
+.content{
+	margin-left: 20%;
+}
+
+/**************ABOUT US**********************/
+#aboutus{
+	background-image:url("../img/userbackground.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
+
+.abtheading{
+	font-size: 50px;
+	color: white;
+	padding-top: 20px;
+}
+
+.companyimg{
+	justify-content: center;
+}
+
+.companyimg img{
+margin-top: 2%;
+    width: 45%;
+}
+
+.abtuscontent h3,.abtuscontent h5,.abtuscontent p,.abtuscontent li{
+	   font-family: Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",
+	                      Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+      line-height: 1.6;
+      margin: 20px;
+	color:white;
+	
+}
+
+.mysection {
+	margin-top:3%;
+    justify-content: center; /* Center horizontally */
+
+}
+
+.mysection .img{
+	padding-bottom: 25px;
+    position: relative;
+    left: -7%;	
+}
+
+.mysection .img img{
+	height: 70vh;
+	width: 60vh;
+	margin-right: 10px;
+}
+
+.mysection .myinfo p{
+	 font-family: "Times New Roman", Times, serif;
+	margin-left: 0px;
+	font-size: 25px;
+	color: white;
+}
+.mysection .myinfo h1{
+		 font-family: "Times New Roman", Times, serif;
+	margin-top:-8%;
+	color: white;
+
+}
+
+.mysection .myinfo a{
+
+	text-decoration: none;
+	font-size:20px;
+	color: white;
+}
+.instalogo{
+	margin-right:18px;
+	margin-top:20px;
+width: 66px;
+    height: 50px; 	
+}
+
+.linkedlogo{
+		margin-right:18px;
+		margin-top:20px;
+	width: 66px;
+    height: 60px;
+}
+

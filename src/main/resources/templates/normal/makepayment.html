@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="~{normal/baseUser::layout(~{::section})}">
+<head>
+<meta charset="UTF-8" />
+<title>Make Payment</title>
+</head> 
+<body>
+	<section>
+	
+        <div class="container ">
+        
+            <div class="paymenttitle text-center text-light"> 
+                   <h1 class=" mt-15">Price Details</h1>
+              </div>
+              
+              <div class="paymentdata">
+                         <table class="table">
+							  <tbody class="text-light">
+									    <tr>
+									      <th scope="row">Price (<span th:text="${totalitems}"></span> items)</th>
+									      <td th:text="${totalsum}"></td>
+									     </tr>
+									    <tr>
+									      <th scope="row">Discount</th>
+									      <td  th:text="-${discount}"></td>
+									    </tr>
+									    <tr>
+									      <th scope="row">Delivery Charges</th>
+									      <td th:text="${Delivery}"></td>
+									    </tr>
+									    <tr>
+									      <th scope="row" class="fs-4">Total Amount</th>
+									      <th class="fw-bold fs-5" th:text="${TotalAmount}"></th>
+									    </tr>
+									    
+									  </tbody>
+					</table>
+					
+					<div class="text-center ">
+                         <button class="btn btn-warning" th:onclick="|placeorder(${TotalAmount})|">
+                              Place Order           
+                         </button>
+                       </div>
+              </div>            
+        </div>
+
+	</section>
+</body>
+</html>

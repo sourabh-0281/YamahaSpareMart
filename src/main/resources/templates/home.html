@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"  th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="UTF-8" />
+<title>Home Page</title>
+</head>
+<body>
+	
+	<section class="homepage">
+		<div id="carouselExampleSlidesOnly" class="carousel slide"
+			data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img th:src="@{/img/firstbike.jpg}" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img th:src="@{/img/secongbike.jpg}" class="d-block w-100" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img th:src="@{/img/thirdbike.jpg}" class="d-block w-100" alt="...">
+				</div>
+			</div>
+		</div>
+		
+			<!-- ABOUT US -->
+	<section id="aboutus">
+
+		<div class="text-center ">
+			<h1 class="abtheading">ABOUT US</h1>
+		</div>
+
+		<div class="abtuscontent">
+             <div class="companyimg d-flex">		 
+     		 <img th:src="@{/img/yamahacompany.jpg}" alt="" />
+     		 </div>
+     		 
+     		 
+     		 <div class="container ">
+         		 <div class="row">
+            		 <div class="col">
+            		         <div style="background-color: rgb(3,3,3,0.5);">
+						    <h3> Welcome to Anil Automobiles </h3>
+						    </div>
+						     <p>Your
+							trusted partner for genuine Yamaha bike parts and accessories!
+							Established over 35 years ago, we have been proudly serving Yamaha
+							bike owners with quality spares, unmatched expertise, and a
+							commitment to excellence.</p>
+							 
+							<p>Our journey began with a passion for Yamaha
+							bikes and a vision to provide customers with easy access to reliable
+							and original spare parts. Over the years, we have grown into a
+							trusted name, building lasting relationships with our customers
+							through honesty, quality service, and a deep understanding of Yamaha
+							motorcycles.</p>
+							
+							<p> Now, with our new online platform, we bring the same
+							dedication and service to your fingertips. Whether you need parts for
+							maintenance or upgrades, we make it easier than ever to find and
+							order exactly what you need – all from the comfort of your home.</p>
+							
+							    <div style="background-color: rgb(3,3,3,0.5); padding: 3px;">
+							<h5> Why choose us?</h5> 
+							</div>
+							<ul>
+							 <li class=".abtlist">35+ Years of Experience: With decades of experience, we
+							understand Yamaha bikes like no one else.</li> 
+							<li class=".abtlist">Genuine Parts: We stock only genuine Yamaha spares, ensuring the best performance for your
+							bike. </li>
+							<li class=".abtlist">Customer-Centric Approach: Our mission is to provide an easy,
+							reliable, and seamless shopping experience.</li> 
+							<li class=".abtlist">Expert Advice: Whether you’re a seasoned rider or a beginner, our team is always here to
+							help with expert advice and recommendations.</li> 
+							</ul>
+							
+							<h5>Thank you for being a
+							part of our journey. We look forward to serving you online and
+							continuing to be your trusted partner for all things Yamaha!</h5>
+					
+					</div>
+ 	         </div>
+ 	</div>
+		
+		  <!-- MY SECTION -->
+		  <div class="d-flex mysection">
+				  <!-- MY PHOTO -->
+				  <div class="img">
+				       <img th:src="@{/img/my photo.jpg}" alt="" />
+				  </div>
+				  
+				  <!-- MY INFO -->
+				    <div class="myinfo">
+				      <p>Co-Founder</p>
+				      <h1><b>Sourabh Kudale</b> </h1>
+				     <a href="https://www.instagram.com/sourabh__0281?igsh=ZWw1YWQxNnJqOG9i">  <img  th:src="@{/img/instalogo.png}" class="instalogo">Instagram</a> </br>
+     				  <a href="https://www.linkedin.com/in/sourabh-kudale-78891a226/" target="_main" > <img  th:src="@{/img/linkedlogo.png}" class="linkedlogo"> LinkedIn</a>
+				    </div>
+		    </div>
+		</div>
+	</section>
+		
+		
+	</section>
+
+</body>
+</html>

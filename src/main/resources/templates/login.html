@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="UTF-8" />
+<title>Login Page</title>
+</head>
+<body>
+
+	<section class="login">
+		<div class="container">
+			<div class="d-flex justify-content-center h-100">
+				<div class="user_card">
+					<div class="d-flex justify-content-center">
+						<div class="brand_logo_container">
+							<img
+								th:src="@{/img/yamahalogo.png}"
+								class="brand_logo" alt="Logo">
+						</div>
+					</div>
+					<div class="d-flex justify-content-center form_container">
+					
+					<!-- FORM -->
+						<form th:action="@{/dologin}" method="post">
+						
+						<!-- ERROR MESSAGE -->
+						 <div th:if="${param.error}"  class="alert alert-danger text-center">
+                                 Invalid username and password 
+                            </div>
+                            
+                            <div th:if="${param.logout}"  class="alert alert-success text-center">
+                                  You have successfully logout 
+                            </div>
+                            
+                              <div th:if="${param.change}"  class="alert alert-success text-center">
+                                     <p th:text="${param.change}"></p>	 
+                               </div>
+                            
+							<div class="input-group mb-3">
+								<div class="input-group-append">
+									<span class="input-group-text"><i class="fas fa-user"></i></span>
+								</div>
+								<input type="text" name="username" class="form-control input_user"
+									value="" placeholder="username" autocomplete="username">
+							</div>
+							<div class="input-group mb-2">
+								<div class="input-group-append">
+									<span class="input-group-text"><i class="fas fa-key"></i></span>
+								</div>
+								<input type="password" name="password" class="form-control input_pass"
+									value="" placeholder="password">
+							</div>
+							<div class="form-group">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input"
+										id="customControlInline"> <label
+										class="custom-control-label" for="customControlInline">Remember
+										me</label>
+								</div>
+							</div>
+							<div class="d-flex justify-content-center mt-3 login_container">
+								<input type="submit" name="submit" class="btn login_btn" value="Login">
+							</div>
+						</form>
+					</div>
+
+					<div class="mt-2">
+						<div class="d-flex justify-content-center links">
+							Don't have an account? <a th:href="@{/home/register}" class="ml-2">Sign Up</a>
+						</div>
+						<div class="d-flex justify-content-center links">
+							<a th:href="@{/forgot}">Forgot your password?</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="~{normal/baseUser::layout(~{::section})}">
+<head>
+<meta charset="UTF-8" />
+<title>Index</title>
+</head>
+<body>
+	<section>
+	
+		<div class="container text-center ">
+			<h1 id="product-title" 	class="heading text-uppercase" th:text="${e.productName}"></h1>
+		</div>
+
+
+
+		<div class="container">
+			<div class="parts">
+			
+			    <div class="d-flex productcontainer">	
+			       	<!-- IMAGE -->
+				       <div class="pimg" >
+				           <img th:src="@{'/img/allparts/'+${e.productImg+'.jpeg'}}" alt="" />
+				       </div>
+				       
+				      <!-- DATA --> 
+				       <div class="data">
+				            <div class="datainside">
+			    		           <h2 th:text="${e.productName}"></h2>
+						           <h5 th:text="${e.productPrice}"></h5>
+						           <p th:text="${e.productDescription}"></p>
+							
+	    			            <button class="btn btn-primary"  th:onclick="|addtocart(${e.productid})|">Add to Cart</button>
+				            
+     				            <button class="btn btn-secondary ">Buy Now</button> 
+				             </div>     
+				       </div>
+				   </div>
+				   
+			</div>
+		</div>
+	</section>
+</body>
+</html>

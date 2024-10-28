@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="~{normal/baseUser::layout(~{::section})}">
+<head>
+<meta charset="UTF-8" />
+<title>Index</title>
+</head>
+<body>
+	<section>
+		<div class="container text-center ">
+			<h1 class="heading text-uppercase">Orders</h1>
+		</div>
+                  <div class="container" th:if="${#lists.size(orders) > 0}">
+					<table class="table" style="background: rgb(255,255,255,0.7);" >
+						<thead>
+							<tr>						    
+								<th scope="col">Transaction_Id</th>
+								<th scope="col">Order_Id</th>
+								<th scope="col">Order_Name</th>
+								<th scope="col">Order_Price</th >
+								<th scope="col">Order_Date</th >
+							</tr>
+						</thead>
+						
+						<tbody th:each="n : ${orders}">
+							<tr>								
+								<td th:text="${n.transactionid}"></td>
+								<td th:text="${n.orderid}"></td>
+								<td th:text="${n.ordername}"></td>
+								<td th:text="${n.orderprice}"></td>
+								<td th:text="${n.date}"></td>
+							</tr>
+            			</tbody>
+					</table>
+            </div>
+            
+            <div class="container text-center" th:unless="${#lists.size(orders) > 0}">
+                    
+			      <img th:src="@{/img/OrderEmpty.png}" alt="" />
+                   <h3 class="text-light mt-3">No Orders Yet!!</h3>
+                   <button class="btn btn-warning mt-2" th:onclick="shopnow()"> Shop Now</button>
+               </div>
+            </div>
+	</section>
+</body>
+</html>

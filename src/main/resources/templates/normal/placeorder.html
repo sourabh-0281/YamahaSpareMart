@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="~{normal/baseUser::layout(~{::section})}">
+<head>
+<meta charset="UTF-8" />
+<title>Place Order</title>
+</head>
+<body>
+	<section>
+           
+           <div class="container ">
+           
+            <div th:if="${message}"  th:classappend="${message.type}"  class="alert"  >
+                 <p th:text="${message.content}"></p>
+            </div>
+            
+           <div class="order ">
+           <div class="row-5 mt-10">
+           <div class="col-11">
+                 <table class="table">
+					  <tbody class="text-light">
+					    <tr>
+					      <th scope="row">Deliver to</th>
+					      <td th:text="${address}"></td>
+					    </tr>
+					    <tr>
+					      <th scope="row">Phone number</th>
+					      <td th:text="${phone}"></td>
+					    </tr>
+					  </tbody>
+					</table>
+					<div class="text-center">
+					<button class="btn btn-primary" th:onclick="editaddress()">Edit</button>
+					<button class="btn btn-warning" th:onclick="|paymentstart(${totalamt})|">Proceed to Pay</button>
+					</div>
+           </div>
+           </div>
+           </div>
+          </div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="~{normal/baseUser::layout(~{::section})}">
+<head>
+<meta charset="UTF-8" />
+<title>Cart</title>
+</head>
+<body>
+	<section>
+          
+          <div class="container text-center ">
+			 <h1 class="heading text-uppercase" >Cart</h1>
+			 
+			    <!-- GO TO PAYMENT BUTTON -->
+			   <div th:if="${#lists.size(cart) > 0}">
+			          <button  th:onclick="gotopayment()" class="btn btn-light paymentbtn">Go to Payment--></button>
+			     </div>
+			 
+		  </div> 
+           
+		<div class="container">
+			<div class="parts">
+				
+				 <!-- FOR LOOP -->
+				  <div th:each=" e : ${cart}" class="d-flex productcontainer">
+				  
+				  		<!-- IMAGE -->
+				       <div class="pimg" >
+				           <img th:src="@{'/img/allparts/'+${e.productImg+'.jpeg'}}" alt="" />
+				       </div>
+				       
+				      <!-- DATA --> 
+				       <div class="data">
+				            <div class="datainside">
+	    		           <h2 th:text="${e.productName}"></h2>
+				           <h5 th:text="${e.productPrice}"></h5>			        							
+				            <button th:onclick="|removecartitem(${e.productid})|" class="btn btn-secondary ">Remove</button>
+				          </div>     
+				     </div>
+			    </div>
+			       <!-- END OF FOR LOOP -->			    			
+			       
+            </div>
+         </div>
+
+            <!-- UNLESS -->
+			   <div th:unless="${#lists.size(cart) > 0}" class="text-center">
+			      <img th:src="@{/img/cartempty.png}" alt="" />
+                   <h3 class="text-light mt-3">Your cart is empty!!</h3>
+                   <button class="btn btn-warning mt-2" th:onclick="shopnow()"> Shop Now</button>
+               </div>
+               
+
+	</section>
+</body>
+</html>

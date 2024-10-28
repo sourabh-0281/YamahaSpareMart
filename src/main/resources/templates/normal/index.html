@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" xmlns:th="www.thymeleaf.org"
+	th:replace="~{normal/baseUser::layout(~{::section})}">
+<head>
+<meta charset="UTF-8" />
+<title>Index</title>
+</head>
+<body>
+	<section>
+
+	<div class="container text-center ">
+					<h1 class="heading">EXPLORE</h1>
+	</div>
+	
+	
+			
+			<div class="container">
+				<div class="parts">
+					<!-- FOR LOOP -->
+					<div class="singlepart" th:each=" n : ${filter}">
+
+						<img th:src="@{${n.imgurl}}" alt="img" class="partsimg" />
+
+						<div class="partstitle">
+							<h1 class="title text-uppercase" th:text="${n.name}"></h1>
+						</div>
+
+						<div class="project-btn">
+							<a th:href="@{/user/listsingleproduct/{name}(name=${n.name})}" > Explore more-> </a>
+						</div>
+					</div>
+					<!-- END OF LOOP -->					
+				</div>
+			</div>
+                
+                <div class="container text-center">
+              <h1 class="pb-5 "> <a class="text-light" th:href="@{/user/products/0}">Explore all--></a></h1>
+              </div>
+		
+	</section>
+</body>
+</html>

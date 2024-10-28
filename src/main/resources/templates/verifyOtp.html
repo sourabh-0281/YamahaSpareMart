@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="~{base::layout(~{::section})}">
+<head>
+<meta charset="UTF-8" />
+<title>Forgot password</title>
+</head>
+<body>
+
+	<section class="login">
+		<div class="container">
+			<div class="d-flex justify-content-center h-100">
+				<div class="user_card">
+					<div class="d-flex justify-content-center">
+						<div class="brand_logo_container">
+							<img th:src="@{/img/yamahalogo.png}" class="brand_logo"
+								alt="Logo">
+						</div>
+					</div>
+                     
+                     <!-- SESSION HANDLING -->
+						<div th:if="${session.message}"
+							th:classappend="${session.message.type}" class="alert"
+							role="alert">
+							<p class="text-center" th:text="${session.message.content}"></p>
+						</div>
+						<script th:if="${session.message}">
+							window.onload = function() {
+								fetch('/home/clear-session-message', {
+									method : 'POST'
+								});
+							};
+						</script>
+
+					 
+                     
+                     
+                     
+					<div th:unless="${session.message}" class="alert alert-success text-center m-4" role="alert">
+					    We have send OTP to your email...
+				    </div>
+						
+					<!-- FORM -->
+					<form th:action="@{/verify}" method="post">
+
+                        <input type="hidden"  th:value="${otp}" name="otp">
+                        <input type="hidden"  th:value="${mail}" name="mail">
+						<div class="form-group">
+                          
+							<input required type="text"
+								placeholder="Enter OTP" class="form-control"
+								id="femail" name="enteredotp">
+						</div>
+
+						<div class="text-center">
+							<button class="btn btn-success">Verify</button>
+						</div>
+
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
